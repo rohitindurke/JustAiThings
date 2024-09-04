@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.4.2",
+    "@clerk/clerk-sdk-node": "^5.0.33",
     "@clerk/nextjs": "^5.3.3",
     "@logto/next": "^3.5.0",
     "@radix-ui/react-dialog": "^1.1.1",
@@ -26,6 +27,7 @@
     "react": "^18",
     "react-dom": "^18",
     "shadcn": "^1.0.0",
+    "svix": "^1.31.0",
     "swr": "^2.2.5",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
