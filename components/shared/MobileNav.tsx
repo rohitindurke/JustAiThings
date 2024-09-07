@@ -35,7 +35,7 @@ const MobileNav = () => {
                
   <SheetTrigger >
     <Image 
-    src= "/assets/images/menu.png" alt='logo'width={28}height={28}/>
+    src= "/assets/images/menu.png" alt='logo'width={23}height={20}/>
   </SheetTrigger>
   <SheetContent className="sheet-content sm:w-64">
    <>

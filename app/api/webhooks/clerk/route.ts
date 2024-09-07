@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { clerkClient } from "@clerk/clerk-sdk-node";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
@@ -64,9 +63,9 @@ export async function POST(req: Request) {
     const user = {
       clerkId: id,
       email: email_addresses[0].email_address,
-      username: username!,
-      firstName: first_name ?? '',
-      lastName: last_name ?? '',
+      username: username || "", // Fallback to an empty string if null
+      firstName: first_name || "", // Fallback to an empty string
+      lastName: last_name || "", // Fallback to an empty string
       photo: image_url,
     };
     
@@ -90,9 +89,9 @@ export async function POST(req: Request) {
     const { id, image_url, first_name, last_name, username } = evt.data;
 
     const user = {
-      firstName: first_name ?? '',
-      lastName: last_name ?? '',
-      username: username!,
+      firstName: first_name || "", // Fallback to an empty string
+      lastName: last_name || "", // Fallback to an empty string
+      username: username || "", // Fallback to an empty string
       photo: image_url,
     };
     
