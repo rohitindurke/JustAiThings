@@ -28,7 +28,7 @@ export const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`sidebar-nav_element group ${
-                      isActive ? "bg-gray-700 text-white" : "text-gray-700"
+                      isActive ? "bg-black text-white" : "text-black"
                     }`}>
                     <Link className="sidebar-link" href={link.route}>
                       <Image
@@ -52,7 +52,7 @@ export const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`sidebar-nav_element group ${
-                      isActive ? "bg-gray-700 text-white" : "text-gray-700"
+                      isActive ? "bg-black text-white" : "text-black"
                     }`}>
                     <Link className="sidebar-link" href={link.route}>
                       <Image
@@ -73,7 +73,7 @@ export const Sidebar = () => {
             </ul>
           </SignedIn>
           <SignedOut>
-            <Button asChild className="button bg-gray-700 bg-cover">
+            <Button asChild className="button bg-black bg-cover">
               <Link href="/sign-in">Log in</Link>
             </Button>
           </SignedOut>
