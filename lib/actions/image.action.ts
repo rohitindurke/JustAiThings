@@ -29,6 +29,7 @@ export async function addImage({ image, userId, path }: AddImageParams) {
     const newImage = await Image.create({
       ...image,
       author: author._id,
+      title: image.title || 'Untitled' ,
     })
 
     revalidatePath(path);
@@ -49,7 +50,6 @@ export async function updateImage({ image, userId, path }: UpdateImageParams) {
     if (!imageToUpdate || imageToUpdate.author.toHexString() !== userId) {
       throw new Error("Unauthorized or image not found");
     }
-
     const updatedImage = await Image.findByIdAndUpdate(
       imageToUpdate._id,
       image,

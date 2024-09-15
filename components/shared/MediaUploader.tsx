@@ -63,7 +63,7 @@ const MediaUploader = ({
     >
       {({ open }) => (
         <div className="flex flex-col gap-4">
-          <h3 className="h3-bold text-black">
+          <h3 className="h3-bold text-dark-600">
             Original
           </h3>
 
@@ -91,7 +91,7 @@ const MediaUploader = ({
                   height={24}
                 />
               </div>
-                <p className="p-14-medium text-black">Click here to upload image</p>
+                <p className="p-14-medium">Click here to upload image</p>
             </div>
           )}
         </div>
@@ -101,3 +101,4 @@ const MediaUploader = ({
 }
 
 export default MediaUploader
+

@@ -11,18 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-
-
 import { Button } from "@/components/ui/button"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
+import {Form} from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { CustomField } from "./CustomField"
 import { useEffect, useState, useTransition } from "react"
@@ -30,12 +20,11 @@ import { AspectRatioKey, debounce, deepMergeObjects } from "@/lib/utils"
 import MediaUploader from "./MediaUploader"
 import TransformedImage from "./TransformedImage"
 import { getCldImageUrl } from "next-cloudinary"
-
+import { useRouter } from "next/navigation"
 import { aspectRatioOptions, creditFee, defaultValues, transformationTypes } from "../constants"
 import { addImage, updateImage } from "@/lib/actions/image.action"
 import { updateCredits } from "@/lib/actions/user.action"
-import InsufficientCreditsModal from "./InsufficientCreditsModal"
-import { useRouter } from "next/navigation"
+import { InsufficientCreditsModal } from "./InsufficientCreditsModal"
  
 export const formSchema = z.object({
   title: z.string(),
@@ -78,8 +67,8 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
         width: image?.width,
         height: image?.height,
         src: image?.publicId,
-        ...transformationConfig,  // Apply transformation config
-      });
+        ...transformationConfig
+      })
 
       const imageData = {
         title: values.title,
@@ -112,6 +101,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           console.log(error);
         }
       }
+
 
       if(action === 'Update') {
         try {
@@ -298,7 +288,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
         <div className="flex flex-col gap-4">
           <Button 
             type="button"
-            className="submit-button "
+            className="submit-button capitalize"
             disabled={isTransforming || newTransformation === null}
             onClick={onTransformHandler}
           >
@@ -306,7 +296,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           </Button>
           <Button 
             type="submit"
-            className="submit-button "
+            className="submit-button capitalize"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Submitting...' : 'Save Image'}
