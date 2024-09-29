@@ -166,7 +166,7 @@
 
   /* =====  SHADCN OVERRIDES */
   .button {
-    @apply py-4 px-6 flex-center gap-3 rounded-full p-16-semibold focus-visible:ring-offset-0 focus-visible:ring-transparent !important;
+    @apply py-4 px-6 flex-center gap-3 rounded-lg p-16-semibold focus-visible:ring-offset-0 focus-visible:ring-transparent !important;
   }
 
   .dropdown-content {
@@ -372,19 +372,4 @@
   font-size: 16px;
   font-weight: 600;
   color: #384262;
-}
-/* Define the overall layout structure */
-.layout-container {
-  display: flex;
-  height: 100vh; /* Full viewport height */
-}
-
-.sidebar {
-  width: 250px; /* Adjust sidebar width as needed */
-  background-color: #f4f4f4; /* Example background */
-}
-
-.content-container {
-  flex-grow: 1; /* The main content takes the remaining space */
-  padding: 20px; /* Adjust padding as needed */
 }

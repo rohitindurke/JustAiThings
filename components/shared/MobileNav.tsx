@@ -71,7 +71,7 @@ const MobileNav = () => {
 </Sheet>
         </SignedIn>
         <SignedOut>
-            <Button asChild className="button bg-purple-gradient bg-cover">
+            <Button asChild className="button bg-black bg-cover">
               <Link href="/sign-in">Log in</Link>
             </Button>
           </SignedOut>
