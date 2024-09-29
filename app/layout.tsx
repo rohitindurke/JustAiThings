@@ -12,6 +12,7 @@ import { Sidebar } from "@/components/shared/Sidebar";
 import "./globals.css";
 import { Variable } from "lucide-react";
 import MobileNav from "@/components/shared/MobileNav";
+import { Toaster } from "@/components/ui/toaster";
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
@@ -34,10 +35,13 @@ export default function RootLayout({
       variables: { colorPrimary: '#624cf5' }
     }}>
       <html lang="en">
-  
+      <Sidebar/>
+      <MobileNav />
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
           {children}
         </body>
+        <Toaster/>
+
       </html>
     </ClerkProvider>
 
