@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const Credits = () => {
   return (
     <div>
-       Credits page is here babay
+      <h1>Credits</h1>
+      <p>page under construction</p>
     </div>
-  )
-}
+  );
+};
 
-export default Credits
+export default Credits;
