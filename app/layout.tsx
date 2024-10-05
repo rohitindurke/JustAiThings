@@ -10,13 +10,18 @@ import {
 } from '@clerk/nextjs'
 import { Sidebar } from "@/components/shared/Sidebar";
 import "./globals.css";
+
 import { Variable } from "lucide-react";
+
 import MobileNav from "@/components/shared/MobileNav";
+
+
+
 import { Toaster } from "@/components/ui/toaster";
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
-  
+
   weight: ['400', '500', '600', '700'],
 
   variable: '--font-ibm-plex'
