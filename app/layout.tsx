@@ -20,6 +20,10 @@ const IBMPlex = IBM_Plex_Sans({
   variable: '--font-ibm-plex'
 });
 
+
+
+
+
 export const metadata: Metadata = {
   title: "JustAiThings",
   description: "AI-powered image generator",
