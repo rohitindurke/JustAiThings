@@ -20,6 +20,7 @@ export const Sidebar = () => {
         <SignedIn />
         <nav className="sidebar-nav">
           <SignedIn>
+            
             <ul>
               {navLinks.slice(0, 6).map((link) => {
                 const isActive = link.route === pathname;
